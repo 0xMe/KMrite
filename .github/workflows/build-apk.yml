@@ -12,7 +12,7 @@ jobs:
       - name: Cancel previous runs
         uses: styfle/cancel-workflow-action@0.9.1
         with:
-          workflow_id: 14258028 # obtained from https://api.github.com/repos/MikeAndrson/Dexter/actions/workflows
+          workflow_id: 14258028
           access_token: ${{ github.token }}
 
       - uses: actions/checkout@v2
