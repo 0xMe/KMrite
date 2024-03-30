@@ -4,8 +4,9 @@ Patch runtime process library(*.so) with offset & hex bytes
 This project is made for you who like to build and injector app with no c++ at all.
 
 ## Build & Usages 
+You can also get the build output in the actions section of the repo or at my telegram channel [@AbhiTheM0dder](https://t.me/AbhiTheM0dder)
 - Download this project
-    - `git --clone  https://github.com/BryanGIG/KMrite`
+    - `git --clone  [https://github.com/BryanGIG/KMrite](https://github.com/AbhiTheModder/KMrite)`
 - Open and build the project
 - Install the app into your android devices
     - If you had root, grant permission root
