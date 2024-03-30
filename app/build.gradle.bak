@@ -4,7 +4,6 @@ plugins {
 }
 
 android {
-    namespace 'com.kmrite'
     compileSdk 32
 
     defaultConfig {

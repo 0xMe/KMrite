@@ -59,14 +59,14 @@ class MainActivity : AppCompatActivity(), Handler.Callback {
                         }
                     }
                 } else {
-                    Toast.makeText(this@MainActivity, "fill all needed info", Toast.LENGTH_SHORT)
+                    Toast.makeText(this@MainActivity, "Missing required fields!", Toast.LENGTH_SHORT)
                         .show()
                 }
             }
 
             github.setOnClickListener {
                 val intent =
-                    Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/BryanGIG/KMrite"))
+                    Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/AbhiTheModder/KMrite"))
                 startActivity(intent)
             }
         }
@@ -95,7 +95,7 @@ class MainActivity : AppCompatActivity(), Handler.Callback {
 
     inner class MSGConnection : ServiceConnection {
         override fun onServiceConnected(name: ComponentName, service: IBinder) {
-            consoleList.add("service: rootService connected")
+            consoleList.add("Service: rootService connected 😈")
             remoteMessenger = Messenger(service)
             if (serviceTestQueued) {
                 serviceTestQueued = false
@@ -103,7 +103,7 @@ class MainActivity : AppCompatActivity(), Handler.Callback {
         }
 
         override fun onServiceDisconnected(name: ComponentName) {
-            consoleList.add("service: rootService disconnected")
+            consoleList.add("Service: rootService disconnected 😭")
             remoteMessenger = null
         }
     }
