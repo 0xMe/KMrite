@@ -24,7 +24,7 @@ You can also get the build output in the [actions](https://github.com/AbhiTheMod
     - Package Name : **The package of your process**
     - Lib Name : **Library(*.so) name**
     - Offset : **0x...**
-    - Hex : **0A010213**
+    - Hex : **200080D2C0035FD6**
 - Click **START PATCH** to begin inject into the process
 
 ## Credits
