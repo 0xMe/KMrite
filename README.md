@@ -1,3 +1,4 @@
+[![Android CI](https://github.com/0xMe/KMrite/actions/workflows/build.yml/badge.svg?branch=master&event=workflow_dispatch)](https://github.com/0xMe/KMrite/actions/workflows/build.yml)
 # KMrite
 Patch runtime process library(*.so) with offset & hex bytes
 <br>
