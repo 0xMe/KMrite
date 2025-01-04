@@ -1,11 +1,12 @@
 name: Android CI
 
 on:
+  pull_request:
   workflow_dispatch:
 
 jobs:
   build:
-    name: Build and Release APK
+    name: Build release apk
     runs-on: ubuntu-latest
 
     steps:
@@ -28,22 +29,16 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Build APK for all devices
-        run: ./gradlew assembleRelease --no-daemon
-
-      - name: Create a Git Tag
-        id: tag
-        run: |
-          TAG_NAME="v$(date +'%Y.%m.%d.%H%M%S')"
-          echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git tag $TAG_NAME
-          git push origin $TAG_NAME
-
-      - name: Upload APKs to Release
-        uses: softprops/action-gh-release@v1
+      - name: Build release apk
+        uses: eskatos/gradle-command-action@v1
         with:
-          files: app/build/outputs/apk/release/*.apk
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          arguments: assembleRelease
+          distributions-cache-enabled: true
+          dependencies-cache-enabled: true
+          configuration-cache-enabled: true
+
+      - name: Upload Release APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: release-apk
+          path: app/build/outputs/apk/release/*.apk
