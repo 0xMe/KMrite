@@ -11,7 +11,7 @@ This project is made for you who like to build and injector app with no c++ at a
 
 
 ## Build & Usages 
-You can also get the build output in the [actions](https://github.com/AbhiTheModder/KMrite/actions) section of the repo or at my telegram channel [@AbhiTheM0dder](https://t.me/AbhiTheM0dder/1225)
+You can also get the build output in the [actions](https://github.com/0xme/KMrite/actions) section of the repo or at my telegram channel [@AbhiTheM0dder](https://t.me/AbhiTheM0dder/1225)
 - Download this project
     - `git --clone  [https://github.com/BryanGIG/KMrite](https://github.com/AbhiTheModder/KMrite)`
 - Open and build the project
